@@ -67,6 +67,13 @@ class ProjectItem extends StatelessWidget {
           width: RM.data.mapSize(mobile: 300, tablet: 300, desktop: 300),
           decoration: BoxDecoration(
             color: Colors.white,
+            boxShadow: const [
+              BoxShadow(
+                color: Colors.grey,
+                blurRadius: 2,
+                offset: Offset(0, 2),
+              )
+            ],
             borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(
                   RM.data.mapSize(mobile: 10, tablet: 12, desktop: 15)),

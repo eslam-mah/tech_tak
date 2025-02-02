@@ -53,32 +53,35 @@ class CustomPrimaryButton extends StatelessWidget {
       desktop: 4,
     );
 
-    return InkWell(
-      onTap: enabled ? onPressed : null,
-      borderRadius: BorderRadius.circular(buttonBorderRadius),
-      child: enabled
-          ? Ink(
-              height: buttonHeight ?? defaultHeight,
-              width: buttonWidth,
+    return Material(
+      color: Colors.transparent,
+      child: InkWell(
+        onTap: enabled ? onPressed : null,
+        borderRadius: BorderRadius.circular(buttonBorderRadius),
+        child: enabled
+            ? Ink(
+                height: buttonHeight ?? defaultHeight,
+                width: buttonWidth,
 
-              // <--- button style ---> //
-              decoration: BoxDecoration(
-                color: enabled ? ColorsBox.primaryColor : ColorsBox.greyBody,
-                borderRadius: BorderRadius.circular(buttonBorderRadius),
-              ),
+                // <--- button style ---> //
+                decoration: BoxDecoration(
+                  color: enabled ? ColorsBox.primaryColor : ColorsBox.greyBody,
+                  borderRadius: BorderRadius.circular(buttonBorderRadius),
+                ),
 
-              // <--- button content ---> //
-              child: Center(
-                child: Text(
-                  title,
-                  textAlign: TextAlign.center,
-                  style: AppTextStyles.medium14().copyWith(
-                    color: enabled ? Colors.white : ColorsBox.primaryColor,
+                // <--- button content ---> //
+                child: Center(
+                  child: Text(
+                    title,
+                    textAlign: TextAlign.center,
+                    style: AppTextStyles.medium14().copyWith(
+                      color: enabled ? Colors.white : ColorsBox.primaryColor,
+                    ),
                   ),
                 ),
-              ),
-            )
-          : const CircularProgressIndicator(),
+              )
+            : const CircularProgressIndicator(),
+      ),
     );
   }
 }

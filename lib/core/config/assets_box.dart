@@ -33,4 +33,16 @@ class AssetsBox {
   static const String testProject =
       'assets/images/Visit Our Website for Instagram Post.png';
   static const String loadingGif = 'assets/icons/download.gif';
+
+  static const String background =
+      'assets/images/Blue Modern Business Envelope (1).png';
+
+  static const String backgroundWhite =
+      'assets/images/Blue Modern Business Envelope (2).png';
+
+  static const String backgroundMobile =
+      'assets/images/Blue Modern Business Envelope (Responsive Presentation).png';
+
+  static const String backgroundMobileWhite =
+      'assets/images/Blue Modern Business Envelope (Responsive Presentation) (1).png';
 }

@@ -1,6 +1,8 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-import 'package:tech_tak/core/config/assets_box.dart';
+import 'package:tech_tak/core/config/colors_box.dart';
 import 'package:tech_tak/core/responsive/responsive_manager.dart';
 import 'package:tech_tak/features/projects_page/data/models/projects_model.dart';
 import 'package:tech_tak/features/projects_page/view/widgets/project_item.dart';
@@ -58,10 +60,9 @@ class _ProjectsListViewState extends State<ProjectsListView> {
           SizedBox(
             height: RM.data.mapSize(mobile: 150, tablet: 150, desktop: 200),
           ),
-          Center(
-              child: Image.asset(
-            AssetsBox.loadingGif,
-            width: RM.data.mapSize(mobile: 60, tablet: 70, desktop: 80),
+          const Center(
+              child: CircularProgressIndicator(
+            color: ColorsBox.primaryColor,
           )),
         ],
       );
@@ -87,14 +88,23 @@ class _ProjectsGridViewWeb extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GridView.builder(
-      gridDelegate:
-          const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
-      shrinkWrap: true,
-      itemCount: projects.length,
-      itemBuilder: (context, index) {
-        return ProjectItem(project: projects[index]);
-      },
+    return ScrollConfiguration(
+      behavior: const MaterialScrollBehavior().copyWith(
+        dragDevices: {
+          PointerDeviceKind.touch,
+          PointerDeviceKind.mouse,
+        },
+      ),
+      child: GridView.builder(
+        gridDelegate:
+            const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+        primary: false, // Avoid conflict with outer scrollable widgets
+        physics: const AlwaysScrollableScrollPhysics(),
+        itemCount: projects.length,
+        itemBuilder: (context, index) {
+          return ProjectItem(project: projects[index]);
+        },
+      ),
     );
   }
 }
@@ -106,15 +116,24 @@ class _ProjectsListViewMobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      shrinkWrap: true,
-      itemCount: projects.length,
-      itemBuilder: (context, index) {
-        return Padding(
-          padding: const EdgeInsets.only(bottom: 20),
-          child: ProjectItem(project: projects[index]),
-        );
-      },
+    return ScrollConfiguration(
+      behavior: const MaterialScrollBehavior().copyWith(
+        dragDevices: {
+          PointerDeviceKind.touch,
+          PointerDeviceKind.mouse,
+        },
+      ),
+      child: ListView.builder(
+        primary: false, // Avoid conflict with outer scrollable widgets
+        physics: const AlwaysScrollableScrollPhysics(),
+        itemCount: projects.length,
+        itemBuilder: (context, index) {
+          return Padding(
+            padding: const EdgeInsets.only(bottom: 20),
+            child: ProjectItem(project: projects[index]),
+          );
+        },
+      ),
     );
   }
 }
@@ -126,14 +145,23 @@ class _ProjectsGridViewTablet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GridView.builder(
-      gridDelegate:
-          const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-      shrinkWrap: true,
-      itemCount: projects.length,
-      itemBuilder: (context, index) {
-        return ProjectItem(project: projects[index]);
-      },
+    return ScrollConfiguration(
+      behavior: const MaterialScrollBehavior().copyWith(
+        dragDevices: {
+          PointerDeviceKind.touch,
+          PointerDeviceKind.mouse,
+        },
+      ),
+      child: GridView.builder(
+        gridDelegate:
+            const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+        primary: false, // Avoid conflict with outer scrollable widgets
+        physics: const AlwaysScrollableScrollPhysics(),
+        itemCount: projects.length,
+        itemBuilder: (context, index) {
+          return ProjectItem(project: projects[index]);
+        },
+      ),
     );
   }
 }

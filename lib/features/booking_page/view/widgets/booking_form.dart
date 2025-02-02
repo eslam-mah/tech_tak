@@ -38,6 +38,7 @@ class _BookingFormState extends State<BookingForm> {
             controller: nameController,
             title: S.of(context).name,
             hintText: S.of(context).yourName,
+            textInputType: TextInputType.text,
             validator: (value) {
               if (value == null || value.isEmpty) {
                 return S.of(context).fieldRequired;
@@ -66,6 +67,7 @@ class _BookingFormState extends State<BookingForm> {
           const SizedBox(height: 10),
           _CustomTextFormField(
             controller: phoneNumberController,
+            textInputType: TextInputType.number,
             title: S.of(context).phoneNumber,
             hintText: S.of(context).yourNumber,
             validator: (value) {
@@ -108,6 +110,7 @@ class _BookingFormState extends State<BookingForm> {
               }
               return null;
             },
+            textInputType: TextInputType.text,
           ),
           const SizedBox(height: 20),
           CustomPrimaryButton(
@@ -135,9 +138,7 @@ class _BookingFormState extends State<BookingForm> {
               try {
                 String uniqueId = uuid.v4();
 
-                await Supabase.instance.client
-                    .from('tech_tak_form')
-                    .insert({
+                await Supabase.instance.client.from('tech_tak_form').insert({
                   'id': uniqueId,
                   'name': nameController.text,
                   'country': selectedCountry,
@@ -179,6 +180,7 @@ class _CustomTextFormField extends StatelessWidget {
   final TextEditingController controller;
   final String title;
   final String hintText;
+  final TextInputType textInputType;
   final String? Function(String?)? validator;
 
   const _CustomTextFormField({
@@ -187,6 +189,7 @@ class _CustomTextFormField extends StatelessWidget {
     required this.title,
     required this.hintText,
     this.validator,
+    required this.textInputType,
   });
 
   @override
@@ -200,6 +203,7 @@ class _CustomTextFormField extends StatelessWidget {
         TextFormField(
           controller: controller,
           validator: validator,
+          keyboardType: textInputType,
           decoration: InputDecoration(
             hintText: hintText,
             hintStyle: const TextStyle(color: Colors.grey),

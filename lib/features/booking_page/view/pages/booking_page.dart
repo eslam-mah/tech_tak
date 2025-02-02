@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
@@ -26,43 +28,45 @@ class BookingPage extends StatelessWidget {
                   child: const LogoWidget())),
           automaticallyImplyLeading: false,
         ),
-        backgroundColor: ColorsBox.greyBody,
-        body: Column(
-          children: [
-            Expanded(
-              child: SingleChildScrollView(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(
-                          left: MediaQuery.of(context).size.width * 0.05,
-                          right: MediaQuery.of(context).size.width * 0.05,
-                          top: RM.data.deviceType == DeviceTypeView.mobile ||
-                                  RM.data.deviceType == DeviceTypeView.tablet
-                              ? MediaQuery.of(context).size.height * 0.05
-                              : MediaQuery.of(context).size.width * 0.03,
-                          bottom: RM.data
-                              .mapSize(mobile: 10, tablet: 10, desktop: 15)),
-                      child: const TitleWidget(),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(
-                        left: MediaQuery.of(context).size.width * 0.05,
-                        right: MediaQuery.of(context).size.width * 0.05,
-                      ),
-                      child: const BookingForm(),
-                    ),
-                    RM.data.deviceType == DeviceTypeView.mobile ||
-                            RM.data.deviceType == DeviceTypeView.tablet
-                        ? Container()
-                        : const ContactUsBottomPage(),
-                  ],
+        backgroundColor: ColorsBox.white,
+        body: ScrollConfiguration(
+          behavior: const MaterialScrollBehavior().copyWith(
+            dragDevices: {
+              PointerDeviceKind.touch,
+              PointerDeviceKind.mouse,
+            },
+          ),
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Padding(
+                  padding: EdgeInsets.only(
+                      left: MediaQuery.of(context).size.width * 0.05,
+                      right: MediaQuery.of(context).size.width * 0.05,
+                      top: RM.data.deviceType == DeviceTypeView.mobile ||
+                              RM.data.deviceType == DeviceTypeView.tablet
+                          ? MediaQuery.of(context).size.height * 0.05
+                          : MediaQuery.of(context).size.width * 0.03,
+                      bottom:
+                          RM.data.mapSize(mobile: 10, tablet: 10, desktop: 15)),
+                  child: const TitleWidget(),
                 ),
-              ),
+                Padding(
+                  padding: EdgeInsets.only(
+                    left: MediaQuery.of(context).size.width * 0.05,
+                    right: MediaQuery.of(context).size.width * 0.05,
+                  ),
+                  child: const BookingForm(),
+                ),
+                RM.data.deviceType == DeviceTypeView.mobile ||
+                        RM.data.deviceType == DeviceTypeView.tablet
+                    ? Container()
+                    : const ContactUsBottomPage(),
+              ],
             ),
-          ],
+          ),
         ));
   }
 }
