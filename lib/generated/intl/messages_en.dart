@@ -57,20 +57,20 @@ class MessageLookup extends MessageLookupByLibrary {
         "contactUs": MessageLookupByLibrary.simpleMessage("Contact Us"),
         "bookingText": MessageLookupByLibrary.simpleMessage(
             "Build Your Website and Mobile App Today, Turn Your Vision into Reality!"),
-        'name': MessageLookupByLibrary.simpleMessage("Name"),
-        'projectDescription':
+        "name": MessageLookupByLibrary.simpleMessage("Name"),
+        "projectDescription":
             MessageLookupByLibrary.simpleMessage("Project description"),
-        'phoneNumber': MessageLookupByLibrary.simpleMessage("Phone number"),
-        'submit': MessageLookupByLibrary.simpleMessage("Submit"),
-        'website': MessageLookupByLibrary.simpleMessage("Website"),
-        'mobileApp': MessageLookupByLibrary.simpleMessage("Mobile App"),
-        'projectType': MessageLookupByLibrary.simpleMessage("Project Type"),
-        'yourName': MessageLookupByLibrary.simpleMessage("Your Name"),
-        'choose': MessageLookupByLibrary.simpleMessage("Choose Project Type"),
-        'yourNumber': MessageLookupByLibrary.simpleMessage("Your Phone Number"),
-        'describe':
+        "phoneNumber": MessageLookupByLibrary.simpleMessage("Phone number"),
+        "submit": MessageLookupByLibrary.simpleMessage("Submit"),
+        "website": MessageLookupByLibrary.simpleMessage("Website"),
+        "mobileApp": MessageLookupByLibrary.simpleMessage("Mobile App"),
+        "projectType": MessageLookupByLibrary.simpleMessage("Project Type"),
+        "yourName": MessageLookupByLibrary.simpleMessage("Your Name"),
+        "choose": MessageLookupByLibrary.simpleMessage("Choose Project Type"),
+        "yourNumber": MessageLookupByLibrary.simpleMessage("Your Phone Number"),
+        "describe":
             MessageLookupByLibrary.simpleMessage("Describe Your Project"),
-        'submitText': MessageLookupByLibrary.simpleMessage(
+        "submitText": MessageLookupByLibrary.simpleMessage(
             "Thank you for submitting your form! Our team will reach out to you as soon as possible."),
         "bachHome": MessageLookupByLibrary.simpleMessage("Back to Home"),
         "chooseCountry":
@@ -82,5 +82,26 @@ class MessageLookup extends MessageLookupByLibrary {
             "Error sending data, please try again later."),
         "visitWebsite": MessageLookupByLibrary.simpleMessage("Visit Website"),
         "downloadFrom": MessageLookupByLibrary.simpleMessage("Download from"),
+        "aboutUs": MessageLookupByLibrary.simpleMessage("About Us"),
+        // Added service titles and descriptions
+        "title1": MessageLookupByLibrary.simpleMessage("iOS App Development"),
+        "serviceDescription1": MessageLookupByLibrary.simpleMessage(
+            "We offer advanced solutions for designing and programming iOS applications in line with the latest Apple standards."),
+        "title2":
+            MessageLookupByLibrary.simpleMessage("Android App Development"),
+        "serviceDescription2": MessageLookupByLibrary.simpleMessage(
+            "We develop high-quality Android applications that cater to user needs and meet market demands."),
+        "title3": MessageLookupByLibrary.simpleMessage("Website Development"),
+        "serviceDescription3": MessageLookupByLibrary.simpleMessage(
+            "We provide professional website design and development services that ensure an excellent user experience and smooth navigation."),
+        "title4": MessageLookupByLibrary.simpleMessage("Consulting Services"),
+        "serviceDescription4": MessageLookupByLibrary.simpleMessage(
+            "We deliver comprehensive technological consultation and digital strategy services to help businesses achieve successful digital transformation."),
+        "title5": MessageLookupByLibrary.simpleMessage("Repairing Services"),
+        "serviceDescription5": MessageLookupByLibrary.simpleMessage(
+            "We offer maintenance and repair services to ensure the continuous performance and efficiency of your applications and websites."),
+        "aboutUsTxt": MessageLookupByLibrary.simpleMessage(
+            "Tech tak is an innovative software development company that serves as a strong bridge between Egyptian and Saudi expertise in the field of digital technology. Specializing in the design and development of mobile applications and websites, Tech tak adheres to the highest standards of quality and professionalism."),
+        "ourServices": MessageLookupByLibrary.simpleMessage("Our Services")
       };
 }

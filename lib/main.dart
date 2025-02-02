@@ -1,4 +1,3 @@
-import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -17,14 +16,11 @@ void main() async {
     url: Constants.supaBaseUrl,
     anonKey: Constants.supaBaseAnonKey,
   );
-  runApp(DevicePreview(
-    enabled: true,
-    builder: (context) => Directionality(
-      textDirection: intl.Intl.getCurrentLocale() == 'ar'
-          ? TextDirection.rtl
-          : TextDirection.ltr,
-      child: const TechTak(),
-    ),
+  runApp(Directionality(
+    textDirection: intl.Intl.getCurrentLocale() == 'ar'
+        ? TextDirection.rtl
+        : TextDirection.ltr,
+    child: const TechTak(),
   ));
 }
 

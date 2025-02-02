@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:tech_tak/features/about_us/about_us_router.dart';
 import 'package:tech_tak/features/booking_page/booking_router.dart';
 import 'package:tech_tak/features/home_page/view/pages/home_page.dart';
 import 'package:tech_tak/features/projects_page/projects_router.dart';
@@ -12,6 +13,7 @@ abstract class Rout {
 
     // ...HomeRouter.goRoutes,
     ...BookingRouter.goRoutes,
-    ...ProjectsRouter.goRoutes
+    ...ProjectsRouter.goRoutes,
+    ...AboutUsRouter.goRoutes
   ]);
 }

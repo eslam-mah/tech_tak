@@ -4,8 +4,8 @@ import 'package:tech_tak/core/config/assets_box.dart';
 import 'package:tech_tak/core/config/colors_box.dart';
 import 'package:tech_tak/core/responsive/responsive_manager.dart';
 import 'package:tech_tak/core/widgets/custom_primary_button.dart';
+import 'package:tech_tak/features/about_us/view/widgets/contact_us_widget.dart';
 import 'package:tech_tak/features/booking_page/view/widgets/submitted_widget.dart';
-import 'package:tech_tak/features/home_page/view/widgets/contact_us_bottom.dart';
 import 'package:tech_tak/features/home_page/view/widgets/logo_widget.dart';
 import 'package:tech_tak/generated/l10n.dart';
 
@@ -92,7 +92,7 @@ class FormSubmittedPage extends StatelessWidget {
               RM.data.deviceType == DeviceTypeView.mobile ||
                       RM.data.deviceType == DeviceTypeView.tablet
                   ? Container()
-                  : const ContactUsBottomPage(),
+                  : const ContactUsWidget(),
             ],
           ),
         ));

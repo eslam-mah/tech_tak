@@ -26,19 +26,30 @@
     "website": "Website",
     "mobileApp": "Mobile App",
     "projectType": "Project Type",
-    "yourName":"Your Name",
-    "choose":"Choose Project Type",
-    "yourNumber":"Your Phone Number",
-    "describe":"Describe Your Project",
-    "submitText":"Thank you for submitting your form! Our team will reach out to you as soon as possible.",
-    "backHome":"Back to Home",
-        "chooseCountry":"Choose your country",
-    "country":"Country",
-    "fieldRequired":"This field is required",
-    "error":"Error sending data, please try again later.",
-    
-    "visitWebsite":"Visit Website",
-    "downloadFrom":"Download from"
-
-
-}
+    "yourName": "Your Name",
+    "choose": "Choose Project Type",
+    "yourNumber": "Your Phone Number",
+    "describe": "Describe Your Project",
+    "submitText": "Thank you for submitting your form! Our team will reach out to you as soon as possible.",
+    "backHome": "Back to Home",
+    "chooseCountry": "Choose your country",
+    "country": "Country",
+    "fieldRequired": "This field is required",
+    "error": "Error sending data, please try again later.",
+    "visitWebsite": "Visit Website",
+    "downloadFrom": "Download from",
+    "aboutUs": "About Us",
+    "ourServices": "Our Services",
+    "aboutUsTxt": "Tech tak is an innovative software development company that serves as a strong bridge between Egyptian and Saudi expertise in the field of digital technology. Specializing in the design and development of mobile applications and websites, Tech tak adheres to the highest standards of quality and professionalism.",
+    "title1": "iOS App Development",
+    "serviceDescription1": "We offer advanced solutions for designing and programming iOS applications in line with the latest Apple standards.",
+    "title2": "Android App Development",
+    "serviceDescription2": "We develop high-quality Android applications that cater to user needs and meet market demands.",
+    "title3": "Website Development",
+    "serviceDescription3": "We provide professional website design and development services that ensure an excellent user experience and smooth navigation.",
+    "title4": "Consulting Services",
+    "serviceDescription4": "We deliver comprehensive technological consultation and digital strategy services to help businesses achieve successful digital transformation.",
+    "title5": "Repairing Services",
+    "serviceDescription5": "We offer maintenance and repair services to ensure the continuous performance and efficiency of your applications and websites."
+  }
+  

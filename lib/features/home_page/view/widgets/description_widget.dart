@@ -66,7 +66,7 @@ class _DescriptionWidgetWeb extends StatelessWidget {
         const SizedBox(height: 20),
         // Animate the second row.
         AnimatedOnScroll(
-          delay: const Duration(milliseconds: 100),
+          delay: const Duration(milliseconds: 50),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -89,7 +89,7 @@ class _DescriptionWidgetWeb extends StatelessWidget {
         const SizedBox(height: 20),
         // Animate the third row.
         AnimatedOnScroll(
-          delay: const Duration(milliseconds: 100),
+          delay: const Duration(milliseconds: 50),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -115,7 +115,7 @@ class _DescriptionWidgetWeb extends StatelessWidget {
 }
 
 class _DescriptionWidgetMobile extends StatelessWidget {
-  const _DescriptionWidgetMobile({Key? key}) : super(key: key);
+  const _DescriptionWidgetMobile({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -142,7 +142,7 @@ class _DescriptionWidgetMobile extends StatelessWidget {
         const SizedBox(height: 10),
         // Animate the first text.
         AnimatedOnScroll(
-          delay: const Duration(milliseconds: 100),
+          delay: const Duration(milliseconds: 50),
           child: SizedBox(
             width: RM.data.mapSize(mobile: 200, tablet: 300, desktop: 500),
             child: Text(
@@ -156,7 +156,7 @@ class _DescriptionWidgetMobile extends StatelessWidget {
         SizedBox(height: RM.data.mapSize(mobile: 100, tablet: 120, desktop: 0)),
         // Animate the second image.
         AnimatedOnScroll(
-          delay: const Duration(milliseconds: 100),
+          delay: const Duration(milliseconds: 50),
           child: Image.asset(
             AssetsBox.description1,
             width: imageWidth,
@@ -166,7 +166,7 @@ class _DescriptionWidgetMobile extends StatelessWidget {
         const SizedBox(height: 10),
         // Animate the second text.
         AnimatedOnScroll(
-          delay: const Duration(milliseconds: 100),
+          delay: const Duration(milliseconds: 50),
           child: SizedBox(
             width: RM.data.mapSize(mobile: 200, tablet: 300, desktop: 500),
             child: Text(
@@ -180,7 +180,7 @@ class _DescriptionWidgetMobile extends StatelessWidget {
         SizedBox(height: RM.data.mapSize(mobile: 100, tablet: 120, desktop: 0)),
         // Animate the third image.
         AnimatedOnScroll(
-          delay: const Duration(milliseconds: 100),
+          delay: const Duration(milliseconds: 50),
           child: Image.asset(
             AssetsBox.description2,
             width: imageWidth,
@@ -190,7 +190,7 @@ class _DescriptionWidgetMobile extends StatelessWidget {
         const SizedBox(height: 10),
         // Animate the third text.
         AnimatedOnScroll(
-          delay: const Duration(milliseconds: 100),
+          delay: const Duration(milliseconds: 50),
           child: SizedBox(
             width: RM.data.mapSize(mobile: 200, tablet: 300, desktop: 500),
             child: Text(

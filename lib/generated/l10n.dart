@@ -160,6 +160,106 @@ class S {
     );
   }
 
+  /// `iOS App Development`
+  String get title1 {
+    return Intl.message(
+      'iOS App Development',
+      name: 'title1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We offer advanced solutions for designing and programming iOS applications in line with the latest Apple standards.`
+  String get serviceDescription1 {
+    return Intl.message(
+      'We offer advanced solutions for designing and programming iOS applications in line with the latest Apple standards.',
+      name: 'serviceDescription1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Android App Development`
+  String get title2 {
+    return Intl.message(
+      'Android App Development',
+      name: 'title2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We develop high-quality Android applications that cater to user needs and meet market demands.`
+  String get serviceDescription2 {
+    return Intl.message(
+      'We develop high-quality Android applications that cater to user needs and meet market demands.',
+      name: 'serviceDescription2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Website Development`
+  String get title3 {
+    return Intl.message(
+      'Website Development',
+      name: 'title3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We provide professional website design and development services that ensure an excellent user experience and smooth navigation.`
+  String get serviceDescription3 {
+    return Intl.message(
+      'We provide professional website design and development services that ensure an excellent user experience and smooth navigation.',
+      name: 'serviceDescription3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Consulting Services`
+  String get title4 {
+    return Intl.message(
+      'Consulting Services',
+      name: 'title4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We deliver comprehensive technological consultation and digital strategy services to help businesses achieve successful digital transformation.`
+  String get serviceDescription4 {
+    return Intl.message(
+      'We deliver comprehensive technological consultation and digital strategy services to help businesses achieve successful digital transformation.',
+      name: 'serviceDescription4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Repairing Services`
+  String get title5 {
+    return Intl.message(
+      'Repairing Services',
+      name: 'title5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We offer maintenance and repair services to ensure the continuous performance and efficiency of your applications and websites.`
+  String get serviceDescription5 {
+    return Intl.message(
+      'We offer maintenance and repair services to ensure the continuous performance and efficiency of your applications and websites.',
+      name: 'serviceDescription5',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Simplifying Technology, Amplifying Results.`
   String get slogan9 {
     return Intl.message(
@@ -335,6 +435,33 @@ class S {
     return Intl.message(
       'Blazing-Fast Websites and Apps That Keep Your Users Coming Back.',
       name: 'description3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get aboutUs {
+    return Intl.message(
+      'About Us',
+      name: 'aboutUs',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get aboutUsTxt {
+    return Intl.message(
+      'Tech tak is an innovative software development company that serves as a strong bridge between Egyptian and Saudi expertise in the field of digital technology. Specializing in the design and development of mobile applications and websites, Tech tak adheres to the highest standards of quality and professionalism.',
+      name: 'aboutUsTxt',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get ourServices {
+    return Intl.message(
+      'Our Services',
+      name: 'ourServices',
       desc: '',
       args: [],
     );

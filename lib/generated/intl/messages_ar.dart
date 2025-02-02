@@ -64,11 +64,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "website": MessageLookupByLibrary.simpleMessage("موقع الكتروني"),
         "mobileApp": MessageLookupByLibrary.simpleMessage("تطبيق موبايل"),
         "projectType": MessageLookupByLibrary.simpleMessage("نوع المشروع"),
-        'yourName': MessageLookupByLibrary.simpleMessage("أسمك"),
-        'yourNumber': MessageLookupByLibrary.simpleMessage("رقمك"),
-        'describe': MessageLookupByLibrary.simpleMessage("أوصف المشروع"),
-        'choose': MessageLookupByLibrary.simpleMessage("أختر نوع المشروع"),
-        'submitText': MessageLookupByLibrary.simpleMessage(
+        "yourName": MessageLookupByLibrary.simpleMessage("أسمك"),
+        "yourNumber": MessageLookupByLibrary.simpleMessage("رقمك"),
+        "describe": MessageLookupByLibrary.simpleMessage("أوصف المشروع"),
+        "choose": MessageLookupByLibrary.simpleMessage("أختر نوع المشروع"),
+        "submitText": MessageLookupByLibrary.simpleMessage(
             "شكرًا لإرسال طلبك! سيتواصل معك فريقنا قريبًا."),
         "backHome":
             MessageLookupByLibrary.simpleMessage("الرجوع للصفحة الرئيسية"),
@@ -78,6 +78,27 @@ class MessageLookup extends MessageLookupByLibrary {
         "error": MessageLookupByLibrary.simpleMessage(
             "حدث خطأ ما ، يرجى المحاولة مرة أخرى في وقت لاحق"),
         "visitWebsite": MessageLookupByLibrary.simpleMessage("زيارة الموقع"),
-        "downloadFrom": MessageLookupByLibrary.simpleMessage("حمله من")
+        "downloadFrom": MessageLookupByLibrary.simpleMessage("حمله من"),
+        "aboutUs": MessageLookupByLibrary.simpleMessage("معلومات عنا"),
+        // Added service titles and descriptions
+        "title1": MessageLookupByLibrary.simpleMessage("تطوير تطبيقات iOS"),
+        "serviceDescription1": MessageLookupByLibrary.simpleMessage(
+            "نقدم حلولاً متقدمة لتصميم وبرمجة تطبيقات iOS بما يتناسب مع أحدث معايير Apple."),
+        "title2": MessageLookupByLibrary.simpleMessage("تطوير تطبيقات Android"),
+        "serviceDescription2": MessageLookupByLibrary.simpleMessage(
+            "نعمل على تطوير تطبيقات Android عالية الجودة تلبي احتياجات المستخدمين ومتطلبات السوق."),
+        "title3": MessageLookupByLibrary.simpleMessage(
+            "تصميم وتطوير مواقع إلكترونية"),
+        "serviceDescription3": MessageLookupByLibrary.simpleMessage(
+            "نوفر خدمات تصميم وبرمجة مواقع إلكترونية احترافية تضمن تجربة مستخدم ممتازة وسهولة التصفح."),
+        "title4": MessageLookupByLibrary.simpleMessage("خدمات استشارية"),
+        "serviceDescription4": MessageLookupByLibrary.simpleMessage(
+            "نقدم استشارات تقنية واستراتيجيات رقمية متكاملة لمساعدة الشركات على تحقيق التحول الرقمي."),
+        "title5": MessageLookupByLibrary.simpleMessage("صيانة وإصلاح"),
+        "serviceDescription5": MessageLookupByLibrary.simpleMessage(
+            "نوفر خدمات الصيانة والإصلاح لضمان استمرارية وكفاءة عمل التطبيقات والمواقع الإلكترونية."),
+        "aboutUsTxt": MessageLookupByLibrary.simpleMessage(
+            "شركة تك تاك هي شركة برمجة مصرية سعودية تتميز في مجال التكنولوجيا الرقمية، متخصصة في تصميم وتطوير تطبيقات الهواتف المحمولة والمواقع الإلكترونية بأعلى معايير الجودة والاحترافية."),
+        "ourServices": MessageLookupByLibrary.simpleMessage("خدماتنا"),
       };
 }

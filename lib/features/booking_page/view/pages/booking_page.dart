@@ -5,9 +5,9 @@ import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 import 'package:tech_tak/core/config/colors_box.dart';
 import 'package:tech_tak/core/responsive/responsive_manager.dart';
+import 'package:tech_tak/features/about_us/view/widgets/contact_us_widget.dart';
 import 'package:tech_tak/features/booking_page/view/widgets/booking_form.dart';
 import 'package:tech_tak/features/booking_page/view/widgets/title_widget.dart';
-import 'package:tech_tak/features/home_page/view/widgets/contact_us_bottom.dart';
 import 'package:tech_tak/features/home_page/view/widgets/logo_widget.dart';
 
 class BookingPage extends StatelessWidget {
@@ -63,7 +63,7 @@ class BookingPage extends StatelessWidget {
                 RM.data.deviceType == DeviceTypeView.mobile ||
                         RM.data.deviceType == DeviceTypeView.tablet
                     ? Container()
-                    : const ContactUsBottomPage(),
+                    : const ContactUsWidget(),
               ],
             ),
           ),
