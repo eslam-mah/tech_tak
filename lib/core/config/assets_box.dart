@@ -10,8 +10,7 @@ class AssetsBox {
   static const String logoPngWhite = 'assets/icons/T_20250114_105503_0000.png';
   static const String banner1 =
       'assets/images/Grey And Blue Modern Transforming Visions Into Digital Realities Instagram Post (2).png';
-  static const String banner2 =
-      'assets/images/Grey And Blue Modern Transforming Visions Into Digital Realities Instagram Post (4).png';
+  static const String banner2 = 'assets/images/banner2.png';
   static const String bannerMobile =
       'assets/images/Purple and Pink Gradient Modern Bold Mobile App Presentation.png';
   static const String bannerMobile2 =

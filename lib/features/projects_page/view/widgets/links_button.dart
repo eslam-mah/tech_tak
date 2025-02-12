@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:tech_tak/core/config/colors_box.dart';
+import 'package:tech_tak/core/responsive/app_text_styles.dart';
 import 'package:tech_tak/core/responsive/responsive_manager.dart';
+import 'package:tech_tak/generated/l10n.dart';
 
 class LinksButton extends StatelessWidget {
   final Function() onPressed;
   final bool enabled;
-  final double? buttonSize;
   final Widget icon;
 
   /// A custom button widget that displays an icon in the center of a circular button.
@@ -21,7 +22,6 @@ class LinksButton extends StatelessWidget {
     super.key,
     required this.onPressed,
     this.enabled = true,
-    this.buttonSize,
     required this.icon,
   });
 
@@ -30,36 +30,41 @@ class LinksButton extends StatelessWidget {
     RM.data.init(context);
 
     // <--- default size of the button ---> //
-    final defaultSize = RM.data.mapSize(
-      mobile: 32,
-      tablet: 42,
-      largerTablet: 44,
-      desktop: 46,
-    );
+    final defaultHeight = RM.data.mapSize(mobile: 35, tablet: 35, desktop: 35);
 
-    final size = buttonSize ?? defaultSize;
+    final defaultWidth =
+        RM.data.mapSize(mobile: 130, tablet: 130, desktop: 130);
 
     return Material(
       color: Colors.transparent,
       child: InkWell(
         onTap: enabled ? onPressed : null,
-        customBorder: const CircleBorder(),
-        borderRadius: BorderRadius.circular(200),
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(200),
-          child: Ink(
-            height: size,
-            width: size,
+        borderRadius: BorderRadius.circular(50),
+        child: Ink(
+          height: defaultHeight,
+          width: defaultWidth,
 
-            // <--- button style ---> //
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: enabled ? ColorsBox.primaryColor : ColorsBox.greyBody,
-            ),
+          // <--- button style ---> //
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(50),
+            color: enabled ? ColorsBox.primaryColor : ColorsBox.greyBody,
+          ),
 
-            // <--- button content ---> //
-            child: Center(
-              child: icon,
+          // <--- button content ---> //
+          child: Center(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                icon,
+                SizedBox(
+                  width: RM.data.mapSize(mobile: 8, tablet: 10, desktop: 10),
+                ),
+                Text(
+                  S.of(context).visitWebsite,
+                  style: AppTextStyles.regular10()
+                      .copyWith(color: ColorsBox.white),
+                ),
+              ],
             ),
           ),
         ),

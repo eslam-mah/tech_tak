@@ -113,7 +113,7 @@ class S {
   /// `Your Partner in Digital Growth.`
   String get slogan4 {
     return Intl.message(
-      'Tech tak is Your Partner in Digital Growth.',
+      'Tech tak: Your choice for reaching new heights.',
       name: 'slogan4',
       desc: '',
       args: [],
@@ -386,10 +386,10 @@ class S {
     );
   }
 
-  String get description {
+  String get description2 {
     return Intl.message(
-      'Every Line of Code is Designed to Shield Your Business and Users.',
-      name: 'description',
+      '24/7 technical support, including detailed consultations.',
+      name: 'description2',
       desc: '',
       args: [],
     );
@@ -422,10 +422,10 @@ class S {
     );
   }
 
-  String get description2 {
+  String get description {
     return Intl.message(
-      'Clean, Scalable, and Future-Ready Code.',
-      name: 'description2',
+      'Our websites and applications adhere to the highest standards of security and protection against hacking.',
+      name: 'description',
       desc: '',
       args: [],
     );

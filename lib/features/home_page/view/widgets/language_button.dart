@@ -6,8 +6,13 @@ import 'package:tech_tak/features/home_page/view/widgets/language_dialoge.dart';
 import 'package:tech_tak/generated/l10n.dart';
 
 class LanguageButton extends StatelessWidget {
+  final Color iconColor;
+  final Color boxColor;
+
   const LanguageButton({
     super.key,
+    required this.iconColor,
+    required this.boxColor,
   });
 
   @override
@@ -32,20 +37,20 @@ class LanguageButton extends StatelessWidget {
           width: width,
           height: height,
           decoration: BoxDecoration(
-              color: ColorsBox.primaryColor,
-              borderRadius: BorderRadius.circular(borderRadius)),
+              color: boxColor,
+              borderRadius: BorderRadius.circular(borderRadius),
+              border: Border.all(color: iconColor)),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Icon(
                 Icons.language,
-                color: ColorsBox.white,
+                color: iconColor,
                 size: iconSize,
               ),
               Text(
                 S.of(context).currentLang,
-                style:
-                    AppTextStyles.regular12().copyWith(color: ColorsBox.white),
+                style: AppTextStyles.regular12().copyWith(color: iconColor),
               )
             ],
           ),

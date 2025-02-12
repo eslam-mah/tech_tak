@@ -144,7 +144,7 @@ class _DescriptionWidgetMobile extends StatelessWidget {
         AnimatedOnScroll(
           delay: const Duration(milliseconds: 50),
           child: SizedBox(
-            width: RM.data.mapSize(mobile: 200, tablet: 300, desktop: 500),
+            width: RM.data.mapSize(mobile: 300, tablet: 400, desktop: 500),
             child: Text(
               S.of(context).description,
               textAlign: TextAlign.center,
@@ -168,7 +168,7 @@ class _DescriptionWidgetMobile extends StatelessWidget {
         AnimatedOnScroll(
           delay: const Duration(milliseconds: 50),
           child: SizedBox(
-            width: RM.data.mapSize(mobile: 200, tablet: 300, desktop: 500),
+            width: RM.data.mapSize(mobile: 300, tablet: 400, desktop: 500),
             child: Text(
               S.of(context).description2,
               textAlign: TextAlign.center,
@@ -192,7 +192,7 @@ class _DescriptionWidgetMobile extends StatelessWidget {
         AnimatedOnScroll(
           delay: const Duration(milliseconds: 50),
           child: SizedBox(
-            width: RM.data.mapSize(mobile: 200, tablet: 300, desktop: 500),
+            width: RM.data.mapSize(mobile: 300, tablet: 400, desktop: 500),
             child: Text(
               S.of(context).description3,
               textAlign: TextAlign.center,

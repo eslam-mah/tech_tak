@@ -16,13 +16,22 @@ class ProjectsPage extends StatelessWidget {
     RM.data.init(context);
     return Scaffold(
         appBar: AppBar(
+          bottom: PreferredSize(
+            preferredSize: const Size.fromHeight(1),
+            child: Container(
+              color: ColorsBox.primaryColor2,
+              height: 1,
+            ),
+          ),
           backgroundColor: Colors.white,
           foregroundColor: Colors.white,
           surfaceTintColor: Colors.white,
           title: Center(
               child: GestureDetector(
                   onTap: () => GoRouter.of(context).go('/'),
-                  child: const LogoWidget())),
+                  child: const LogoWidget(
+                    logo: AssetsBox.logoPngBlue,
+                  ))),
           automaticallyImplyLeading: false,
         ),
         backgroundColor: ColorsBox.white,

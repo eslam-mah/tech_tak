@@ -32,10 +32,25 @@ Future<dynamic> languageSelectionDialog(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Text(
-                    S.of(context).chooseLang,
-                    style: AppTextStyles.medium16()
-                        .copyWith(color: ColorsBox.primaryColor),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.language,
+                        color: ColorsBox.primaryColor,
+                        size: RM.data
+                            .mapSize(mobile: 25, tablet: 30, desktop: 30),
+                      ),
+                      SizedBox(
+                        width: RM.data
+                            .mapSize(mobile: 10, tablet: 15, desktop: 15),
+                      ),
+                      Text(
+                        S.of(context).chooseLang,
+                        style: AppTextStyles.medium16()
+                            .copyWith(color: ColorsBox.primaryColor),
+                      ),
+                    ],
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,

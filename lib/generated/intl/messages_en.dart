@@ -33,7 +33,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "slogan3": MessageLookupByLibrary.simpleMessage(
             "Crafting Websites That Speak for Your Brand."),
         "slogan4": MessageLookupByLibrary.simpleMessage(
-            "Tech tak is Your Partner in Digital Growth."),
+            "Tech tak: Your choice for reaching new heights."),
         "slogan5": MessageLookupByLibrary.simpleMessage(
             "From Vision to Reality: Websites and Apps Done Right."),
         "slogan6": MessageLookupByLibrary.simpleMessage(
@@ -48,10 +48,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Creating Digital Masterpieces for Your Business."),
         "bookNow": MessageLookupByLibrary.simpleMessage("Start Now"),
         "ourProjects": MessageLookupByLibrary.simpleMessage("Our Projects"),
-        "description": MessageLookupByLibrary.simpleMessage(
-            "Every Line of Code is Designed to Shield Your Business and Users."),
         "description2": MessageLookupByLibrary.simpleMessage(
-            "Clean, Scalable, and Future-Ready Code."),
+            "24/7 technical support, including detailed consultations."),
+        "description": MessageLookupByLibrary.simpleMessage(
+            "Our websites and applications adhere to the highest standards of security and protection against hacking."),
         "description3": MessageLookupByLibrary.simpleMessage(
             "Blazing-Fast Websites and Apps That Keep Your Users Coming Back."),
         "contactUs": MessageLookupByLibrary.simpleMessage("Contact Us"),

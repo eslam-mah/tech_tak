@@ -72,7 +72,7 @@ class _HomeSliderWebState extends State<_HomeSliderWeb> {
                 );
               },
               options: CarouselOptions(
-                aspectRatio: 2.72,
+                aspectRatio: 2.82,
                 autoPlay: true,
                 onPageChanged: (index, reason) {
                   setState(() {
@@ -218,7 +218,7 @@ class _TextSliderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: RM.data.mapSize(mobile: 250, tablet: 350, desktop: 500),
+      width: RM.data.mapSize(mobile: 350, tablet: 520, desktop: 500),
       child: Text(
         slogans[_currentIndex],
         textAlign: RM.data.deviceType == DeviceTypeView.mobile ||

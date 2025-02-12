@@ -17,84 +17,84 @@ class FormSubmittedPage extends StatelessWidget {
   Widget build(BuildContext context) {
     RM.data.init(context);
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.white,
-          foregroundColor: Colors.white,
-          surfaceTintColor: Colors.white,
-          title: Center(
-              child: GestureDetector(
-                  onTap: () => GoRouter.of(context).go('/'),
-                  child: const LogoWidget())),
-          automaticallyImplyLeading: false,
+      appBar: AppBar(
+        bottom: PreferredSize(
+          preferredSize: const Size.fromHeight(1),
+          child: Container(
+            color: ColorsBox.primaryColor2,
+            height: 1,
+          ),
         ),
-        backgroundColor: ColorsBox.white,
-        body: Container(
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: RM.data.deviceType == DeviceTypeView.desktop
-                  ? const AssetImage(AssetsBox.backgroundWhite)
-                  : const AssetImage(AssetsBox.backgroundMobileWhite),
-              fit: BoxFit.cover,
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.white,
+        surfaceTintColor: Colors.white,
+        title: Center(
+            child: GestureDetector(
+                onTap: () => GoRouter.of(context).go('/'),
+                child: const LogoWidget(
+                  logo: AssetsBox.logoPngBlue,
+                ))),
+        automaticallyImplyLeading: false,
+      ),
+      backgroundColor: ColorsBox.greyBody,
+      body: Column(
+        children: [
+          Expanded(
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(
+                        left: MediaQuery.of(context).size.width * 0.05,
+                        right: MediaQuery.of(context).size.width * 0.05,
+                        top: RM.data.deviceType == DeviceTypeView.mobile ||
+                                RM.data.deviceType == DeviceTypeView.tablet
+                            ? MediaQuery.of(context).size.height * 0.05
+                            : MediaQuery.of(context).size.width * 0.03,
+                        bottom: RM.data
+                            .mapSize(mobile: 10, tablet: 10, desktop: 15)),
+                    child: Center(
+                      child: Icon(
+                        Icons.verified,
+                        size: RM.data.mapSize(
+                            mobile: 150,
+                            tablet: 180,
+                            largerTablet: 200,
+                            desktop: 250),
+                        color: ColorsBox.primaryColor,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(
+                        left: MediaQuery.of(context).size.width * 0.05,
+                        right: MediaQuery.of(context).size.width * 0.05,
+                        bottom: RM.data
+                            .mapSize(mobile: 10, tablet: 10, desktop: 15)),
+                    child: const SubmittedWidget(),
+                  ),
+                  CustomPrimaryButton(
+                    onPressed: () {
+                      GoRouter.of(context).go('/');
+                    },
+                    title: S.of(context).backHome,
+                    buttonHeight:
+                        RM.data.mapSize(mobile: 40, tablet: 50, desktop: 60),
+                    buttonWidth:
+                        RM.data.mapSize(mobile: 150, tablet: 200, desktop: 250),
+                  )
+                ],
+              ),
             ),
           ),
-          child: Column(
-            children: [
-              Expanded(
-                child: SingleChildScrollView(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.only(
-                            left: MediaQuery.of(context).size.width * 0.05,
-                            right: MediaQuery.of(context).size.width * 0.05,
-                            top: RM.data.deviceType == DeviceTypeView.mobile ||
-                                    RM.data.deviceType == DeviceTypeView.tablet
-                                ? MediaQuery.of(context).size.height * 0.05
-                                : MediaQuery.of(context).size.width * 0.03,
-                            bottom: RM.data
-                                .mapSize(mobile: 10, tablet: 10, desktop: 15)),
-                        child: Center(
-                          child: Icon(
-                            Icons.verified,
-                            size: RM.data.mapSize(
-                                mobile: 150,
-                                tablet: 180,
-                                largerTablet: 200,
-                                desktop: 250),
-                            color: ColorsBox.primaryColor,
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(
-                            left: MediaQuery.of(context).size.width * 0.05,
-                            right: MediaQuery.of(context).size.width * 0.05,
-                            bottom: RM.data
-                                .mapSize(mobile: 10, tablet: 10, desktop: 15)),
-                        child: const SubmittedWidget(),
-                      ),
-                      CustomPrimaryButton(
-                        onPressed: () {
-                          GoRouter.of(context).go('/');
-                        },
-                        title: S.of(context).backHome,
-                        buttonHeight: RM.data
-                            .mapSize(mobile: 40, tablet: 50, desktop: 60),
-                        buttonWidth: RM.data
-                            .mapSize(mobile: 150, tablet: 200, desktop: 250),
-                      )
-                    ],
-                  ),
-                ),
-              ),
-              RM.data.deviceType == DeviceTypeView.mobile ||
-                      RM.data.deviceType == DeviceTypeView.tablet
-                  ? Container()
-                  : const ContactUsWidget(),
-            ],
-          ),
-        ));
+          // RM.data.deviceType == DeviceTypeView.mobile ||
+          //         RM.data.deviceType == DeviceTypeView.tablet
+          //     ? Container()
+          //     : const ContactUsWidget(),
+        ],
+      ),
+    );
   }
 }

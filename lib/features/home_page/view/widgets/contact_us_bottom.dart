@@ -150,7 +150,7 @@ class _ContactUsWeb extends StatelessWidget {
                     ),
                     _ContactDataWidget(
                       onPressed: () {
-                        _launchUrl(Uri.parse('https://wa.me/+201147829502'));
+                        _launchUrl(Uri.parse('https://wa.me/+201044669756'));
                       },
                       icon: Icon(
                         FontAwesomeIcons.whatsapp,
@@ -159,8 +159,8 @@ class _ContactUsWeb extends StatelessWidget {
                             .mapSize(mobile: 12, tablet: 16, desktop: 20),
                       ),
                       title: intl.Intl.getCurrentLocale() == 'ar'
-                          ? '201147829502+'
-                          : '+201147829502',
+                          ? '201044669756+'
+                          : '+201044669756',
                     ),
                   ],
                 ),
@@ -282,21 +282,21 @@ class _ContactUsMobile extends StatelessWidget {
                 ),
                 _ContactDataWidget(
                   onPressed: () async {
-                    _sendEmail;
+                    _launchUrl(Uri.parse('techtak@tech-tak.com'));
                   },
                   icon: Icon(
                     Icons.mail,
                     color: ColorsBox.white,
                     size: RM.data.mapSize(mobile: 35, tablet: 35, desktop: 20),
                   ),
-                  title: 'techtakxpage@gmail.com',
+                  title: 'techtak@tech-tak.com',
                 ),
                 SizedBox(
                   height: RM.data.mapSize(mobile: 5, tablet: 5, desktop: 10),
                 ),
                 _ContactDataWidget(
                   onPressed: () {
-                    _launchUrl(Uri.parse('https://wa.me/+201147829502'));
+                    _launchUrl(Uri.parse('https://wa.me/+201044669746'));
                   },
                   icon: Icon(
                     FontAwesomeIcons.whatsapp,
@@ -304,8 +304,8 @@ class _ContactUsMobile extends StatelessWidget {
                     size: RM.data.mapSize(mobile: 35, tablet: 35, desktop: 20),
                   ),
                   title: intl.Intl.getCurrentLocale() == 'ar'
-                      ? '201147829502+'
-                      : '+201147829502',
+                      ? '201044669746+'
+                      : '+201044669746',
                 ),
               ],
             ),

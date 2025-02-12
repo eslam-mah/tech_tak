@@ -138,10 +138,8 @@ class ProjectItem extends StatelessWidget {
                   children: [
                     SizedBox(
                         width: RM.data
-                            .mapSize(mobile: 10, tablet: 10, desktop: 10)),
+                            .mapSize(mobile: 13, tablet: 13, desktop: 13)),
                     LinksButton(
-                      buttonSize:
-                          RM.data.mapSize(mobile: 35, tablet: 35, desktop: 35),
                       onPressed: () async {
                         await _launchUrl(Uri.parse(project.webLink ?? ''));
                       },
@@ -152,12 +150,6 @@ class ProjectItem extends StatelessWidget {
                             .mapSize(mobile: 20, tablet: 20, desktop: 20),
                       ),
                     ),
-                    SizedBox(
-                        width: RM.data
-                            .mapSize(mobile: 10, tablet: 10, desktop: 10)),
-                    Text(S.of(context).visitWebsite,
-                        style: AppTextStyles.regular12()
-                            .copyWith(color: ColorsBox.primaryColor)),
                   ],
                 ),
               ]

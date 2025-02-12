@@ -41,14 +41,14 @@ class _ContactUsWidgetWeb extends StatelessWidget {
           .join('&');
     }
 
-    void _sendEmail() async {
+    void sendEmail() async {
       // Replace with your email details
       final Uri emailUri = Uri(
         scheme: 'mailto',
-        path: 'example@gmail.com', // Replace with the recipient's email
+        path: 'techtak@tech-tak.com',
         query: _encodeQueryParameters(<String, String>{
-          'subject': 'Hello from Flutter',
-          'body': 'This is a test email sent from my Flutter app.',
+          'subject': 'subject',
+          'body': 'body',
         }),
       );
 
@@ -67,7 +67,7 @@ class _ContactUsWidgetWeb extends StatelessWidget {
     }
 
     return Container(
-      color: ColorsBox.greyBody,
+      color: ColorsBox.white,
       height: RM.data.mapSize(mobile: 300, tablet: 250, desktop: 120),
       width: MediaQuery.of(context).size.width,
       child: Padding(
@@ -133,16 +133,14 @@ class _ContactUsWidgetWeb extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     _ContactDataWidget(
-                      onPressed: () {
-                        _sendEmail;
-                      },
+                      onPressed: sendEmail,
                       icon: Icon(
                         Icons.mail,
                         color: ColorsBox.primaryColor,
                         size: RM.data
                             .mapSize(mobile: 12, tablet: 16, desktop: 20),
                       ),
-                      title: 'techtakxpage@gmail.com',
+                      title: 'techtak@tech-tak.com',
                     ),
                     SizedBox(
                       width:
@@ -150,7 +148,7 @@ class _ContactUsWidgetWeb extends StatelessWidget {
                     ),
                     _ContactDataWidget(
                       onPressed: () {
-                        _launchUrl(Uri.parse('https://wa.me/+201147829502'));
+                        _launchUrl(Uri.parse('https://wa.me/+201044669756'));
                       },
                       icon: Icon(
                         FontAwesomeIcons.whatsapp,
@@ -159,8 +157,8 @@ class _ContactUsWidgetWeb extends StatelessWidget {
                             .mapSize(mobile: 12, tablet: 16, desktop: 20),
                       ),
                       title: intl.Intl.getCurrentLocale() == 'ar'
-                          ? '201147829502+'
-                          : '+201147829502',
+                          ? '201044669756+'
+                          : '+201044669756',
                     ),
                   ],
                 ),
@@ -198,14 +196,14 @@ class _ContactUsWidgetMobile extends StatelessWidget {
           .join('&');
     }
 
-    void _sendEmail() async {
+    void sendEmail() async {
       // Replace with your email details
       final Uri emailUri = Uri(
         scheme: 'mailto',
-        path: 'example@gmail.com', // Replace with the recipient's email
+        path: 'techtak@tech-tak.com',
         query: _encodeQueryParameters(<String, String>{
-          'subject': 'Hello from Flutter',
-          'body': 'This is a test email sent from my Flutter app.',
+          'subject': 'subject',
+          'body': 'body',
         }),
       );
 
@@ -227,7 +225,7 @@ class _ContactUsWidgetMobile extends StatelessWidget {
       height: RM.data.mapSize(mobile: 250, tablet: 250, desktop: 0),
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
-          color: ColorsBox.greyBody,
+          color: ColorsBox.white,
           borderRadius: BorderRadius.circular(
               RM.data.mapSize(mobile: 10, tablet: 10, desktop: 10))),
       child: Padding(
@@ -281,22 +279,20 @@ class _ContactUsWidgetMobile extends StatelessWidget {
                   height: RM.data.mapSize(mobile: 5, tablet: 5, desktop: 10),
                 ),
                 _ContactDataWidget(
-                  onPressed: () async {
-                    _sendEmail;
-                  },
                   icon: Icon(
                     Icons.mail,
                     color: ColorsBox.primaryColor,
                     size: RM.data.mapSize(mobile: 35, tablet: 35, desktop: 20),
                   ),
-                  title: 'techtakxpage@gmail.com',
+                  title: 'techtak@tech-tak.com',
+                  onPressed: sendEmail,
                 ),
                 SizedBox(
                   height: RM.data.mapSize(mobile: 5, tablet: 5, desktop: 10),
                 ),
                 _ContactDataWidget(
                   onPressed: () {
-                    _launchUrl(Uri.parse('https://wa.me/+201147829502'));
+                    _launchUrl(Uri.parse('https://wa.me/+201044669746'));
                   },
                   icon: Icon(
                     FontAwesomeIcons.whatsapp,
@@ -304,8 +300,8 @@ class _ContactUsWidgetMobile extends StatelessWidget {
                     size: RM.data.mapSize(mobile: 35, tablet: 35, desktop: 20),
                   ),
                   title: intl.Intl.getCurrentLocale() == 'ar'
-                      ? '201147829502+'
-                      : '+201147829502',
+                      ? '201044669746+'
+                      : '+201044669746',
                 ),
               ],
             ),

@@ -1,8 +1,8 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
+import 'package:tech_tak/core/config/assets_box.dart';
 import 'package:tech_tak/core/config/colors_box.dart';
 import 'package:tech_tak/core/responsive/responsive_manager.dart';
 import 'package:tech_tak/features/about_us/view/widgets/contact_us_widget.dart';
@@ -18,17 +18,27 @@ class BookingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     RM.data.init(context);
     return Scaffold(
+        resizeToAvoidBottomInset: true,
         appBar: AppBar(
+          bottom: PreferredSize(
+            preferredSize: const Size.fromHeight(1),
+            child: Container(
+              color: ColorsBox.primaryColor2,
+              height: 1,
+            ),
+          ),
           backgroundColor: Colors.white,
           foregroundColor: Colors.white,
           surfaceTintColor: Colors.white,
           title: Center(
               child: GestureDetector(
                   onTap: () => GoRouter.of(context).go('/'),
-                  child: const LogoWidget())),
+                  child: const LogoWidget(
+                    logo: AssetsBox.logoPngBlue,
+                  ))),
           automaticallyImplyLeading: false,
         ),
-        backgroundColor: ColorsBox.white,
+        backgroundColor: ColorsBox.greyBody,
         body: ScrollConfiguration(
           behavior: const MaterialScrollBehavior().copyWith(
             dragDevices: {
@@ -60,10 +70,10 @@ class BookingPage extends StatelessWidget {
                   ),
                   child: const BookingForm(),
                 ),
-                RM.data.deviceType == DeviceTypeView.mobile ||
-                        RM.data.deviceType == DeviceTypeView.tablet
-                    ? Container()
-                    : const ContactUsWidget(),
+                // RM.data.deviceType == DeviceTypeView.mobile ||
+                //         RM.data.deviceType == DeviceTypeView.tablet
+                //     ? Container()
+                //     : const ContactUsWidget(),
               ],
             ),
           ),

@@ -1,11 +1,11 @@
 {
-    "name": "tech_tak",
-    "short_name": "tech_tak",
+    "name": "Tech tak",
+    "short_name": "Tech tak",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Tech tak is Your Partner in Digital Growth.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

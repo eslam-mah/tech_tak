@@ -32,7 +32,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "slogan3": MessageLookupByLibrary.simpleMessage(
             "نصمم مواقع ويب تُعبّر عن علامتك التجارية."),
         "slogan4": MessageLookupByLibrary.simpleMessage(
-            "تك تاك شريكك في النمو الرقمي."),
+            "تك تاك خيارك البسيط نحو القمة."),
         "slogan5": MessageLookupByLibrary.simpleMessage(
             "من الرؤية إلى الواقع: مواقع وتطبيقات باحترافية."),
         "slogan6": MessageLookupByLibrary.simpleMessage(
@@ -47,10 +47,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("نصنع روائع رقمية لأعمالك."),
         "bookNow": MessageLookupByLibrary.simpleMessage("أبدأ الان"),
         "ourProjects": MessageLookupByLibrary.simpleMessage("مشاريعنا"),
-        "description": MessageLookupByLibrary.simpleMessage(
-            "كل سطر من الكود مصمم لحماية عملك ومستخدميك."),
         "description2": MessageLookupByLibrary.simpleMessage(
-            "كود نظيف وقابل للتطوير ومُعدّ للمستقبل."),
+            "دعمٍ فنيٍّ متكامل على مدار الساعة، تشمل الاستشارات التقنية"),
+        "description": MessageLookupByLibrary.simpleMessage(
+            "تتمتع مواقعنا وتطبيقاتنا بأعلى معايير الأمان والحماية من الاختراق"),
         "description3": MessageLookupByLibrary.simpleMessage(
             "مواقع وتطبيقات فائقة السرعة تُبقي مستخدميك دائمًا في تفاعل."),
         "contactUs": MessageLookupByLibrary.simpleMessage("تواصل الأن"),
